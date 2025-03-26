@@ -14,4 +14,6 @@ public interface AdminService {
 
     public void updateUserByEmail(String email, String name, List<String> mobile);
 
+    public boolean isUserPresentByEmail(String email);
+
 }
