@@ -85,7 +85,10 @@ public class Admin implements AdminService{
                 {
                     user.setEmail(email);
                     user.setMobile(mobile);
-                    user.setName(name);
+                    if(name != null)
+                    {
+                        user.setName(name);
+                    }
                 }
             }
         }

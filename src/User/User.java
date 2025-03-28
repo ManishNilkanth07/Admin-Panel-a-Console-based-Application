@@ -45,9 +45,5 @@ public class User {
     {
         return this.mobile;
     }
-    @Override
-    public String toString()
-    {
-        return null;
-    }
+
 }
