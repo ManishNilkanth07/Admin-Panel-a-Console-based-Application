@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Admin implements AdminService{
+public class AdminServiceImpl implements AdminService{
 
     private final List<User> userList = new ArrayList<>();
 
@@ -81,13 +81,17 @@ public class Admin implements AdminService{
         {
             if(user.getEmail().equals(email))
             {
-                if(Validator.isValidEmail(email) && Validator.areValidMobileNumbers(mobile))
+                if(Validator.isValidEmail(email) )
                 {
-                    user.setEmail(email);
-                    user.setMobile(mobile);
                     if(name != null)
                     {
                         user.setName(name);
+                        System.out.println("User name updated successfully!");
+                    }
+                    if(mobile != null && Validator.areValidMobileNumbers(mobile))
+                    {
+                        user.setMobile(mobile);
+                        System.out.println("User mobile number updated successfully!");
                     }
                 }
             }
